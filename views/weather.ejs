@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APIWebApp</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="response-area">
+            <p>
+                <%= content %>
+            </p>
+        </div>
+        <form method="post" id="myForm">
+            <label for="latInput">Latitude:</label>
+            <input type="number" id="latInput" name="latitude">
+
+            <label for="lonInput">Longitude:</label>
+            <input type="number" id="lonInput" name="longitude">
+
+            <input id="weather" type="submit" value="GET" formaction="/weather-post">
+        </form>
+    </div>
+</body>
+</html>
